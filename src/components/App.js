@@ -4,8 +4,16 @@ import React, { useState } from 'react';
 
 export default function App() {
  //code here 
-
+  const [input, setInput] = useState("");
+    const [text, setText] = useState("");
  
+    function handleChange(e) {
+        const newValue = e.target.value;
+        setInput(newValue);
+    }
+    function handleClick() {
+        setText(text + input)
+    }
   return (
     <div>
    {/* the <p> tag with id text will show the concatinated string as output on string 
@@ -20,3 +28,4 @@ export default function App() {
     </div>
   );
 }
+export default App;
